@@ -40,8 +40,8 @@ jobs:
           sudo mv migrate.linux-amd64 $GOPATH/bin/migrate
           which migrate
 
-      - name: Install pq
-        run: go get github.com/lib/pq
+      - name: Install dependencies
+        run: go get -d ./...
 
 
       - name: Run migrations
